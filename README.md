@@ -21,7 +21,7 @@ example metronome job config:
 {
   "id": "mesos-cloudwatch-autoscale",
   "run": {
-    "cmd": "docker pull naorlivne/mesos-cloudwatch-autoscale:latest && docker run --rm  -e METRICS_NAMESPACE=mesos/ -e AWS_ACCESS_KEY_ID=your_aws_Key -e AWS_SECRET_ACCESS_KEY=your_aws_secret -e MESOS_URL=http://leader.mesos -e AWS_DEFAULT_REGION=us-east-1 -e MESOS_PORT=5050 -e METRICS_PREFIX=vidazoo_dcos naorlivne/mesos-cloudwatch-autoscale:latest",
+    "cmd": "docker pull naorlivne/mesos-cloudwatch-autoscale:latest && docker run --rm  -e METRICS_NAMESPACE=mesos/ -e AWS_ACCESS_KEY_ID=your_aws_Key -e AWS_SECRET_ACCESS_KEY=your_aws_secret -e MESOS_URL=http://leader.mesos -e AWS_DEFAULT_REGION=us-east-1 -e MESOS_PORT=5050 -e METRICS_PREFIX=dev_dcos naorlivne/mesos-cloudwatch-autoscale:latest",
     "cpus": 0.1,
     "mem": 256,
     "disk": 100

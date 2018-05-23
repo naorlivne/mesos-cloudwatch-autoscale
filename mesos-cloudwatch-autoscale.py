@@ -9,7 +9,7 @@ def get_mesos_metrics(mesos_url, mesos_port):
     headers = {
         'cache-control': "no-cache"
     }
-    response = requests.request("GET", mesos_url + ":" + mesos_port + "/metrics/snapshot", headers=headers)
+    response = requests.request("GET", mesos_url + ":" + mesos_port + "/metrics/snapshot", headers=headers, timeout=10)
     mesos_info = response.json()
     cpu_percent, mem_percent, hd_percent = (mesos_info["master/cpus_percent"] * 100.0), \
                                            (mesos_info["master/mem_percent"] * 100.0), \
